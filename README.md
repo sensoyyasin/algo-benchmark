@@ -28,7 +28,6 @@ Clean Build Files
 make clean
 
 
-
 ## Project Overview
 
 Analyzing an algorithm means predicting the resources it requires, primarily computational time. Sorting algorithms are typically evaluated in terms of best-case, average-case, and worst-case running times. Common complexity classes include:
@@ -59,6 +58,29 @@ $$\sum_{i=1}^{n-1} i = \frac{n(n-1)}{2}$$
 
 **Observation:**  
 Although Quick Sort has O(n log n) complexity, constant factors (recursive calls, pivot selection, partitioning) make it slower than Insertion Sort for small n (e.g., 10–50 elements).
+
+
+**Why Insertion Sort is Faster for Small Inputs than Quick Sort:**  
+When discussing Big-O, constant factors are ignored. Big-O describes growth as n → ∞, but not actual runtime, especially for small n.  
+
+- Insertion Sort: O(n²) with very small constants  
+- Quick Sort: O(n log n) with much larger constants (recursive calls, stack frames, pivot selection, partitioning, comparisons/swaps)  
+
+For small datasets, actual runtimes can be approximated by constants:  
+
+$$\text{Insertion Sort Time} \approx 1.2 n^2$$  
+$$\text{Quick Sort Time} \approx 10 n \log n$$  
+
+| n    | Insertion Sort | Quick Sort | Faster Algorithm |
+|------|----------------|------------|-----------------|
+| 10   | 1.2 × 10² ≈ 120 | 10 × 10 log 10 ≈ 230 | Insertion Sort |
+| 40   | 1.2 × 40² ≈ 1920 | 10 × 40 log 40 ≈ 2120 | Insertion Sort |
+| 200  | 1.2 × 200² ≈ 48,000 | 10 × 200 log 200 ≈ 15,200 | Quick Sort |
+
+**Observation:**  
+- Although n² grows faster than n log n asymptotically, the larger constant factor in Quick Sort makes it slower for small n.  
+- This explains why Insertion Sort can outperform Quick Sort on small datasets (≈10–50 elements).
+
 
 ---
 
