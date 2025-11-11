@@ -246,10 +246,16 @@ In this case, we’re waiting merge sort and quicksort can dominate all the algo
 in terms of space complexity.
 
 Approximately :
-Unsorted random 10000 elements Bubble Sort - Duration: 0.562018 seconds Insertion
-- Sort - Duration: 0.224414 seconds Merge Sort - Duration: 0.00202379 seconds Quick
-- Sort- Duration: 0.00253513 seconds Quick Sort with Median Duration: 0.0289556 seconds
-- Quick Sort with Median Of Three Duration: 0.00233937 seconds Selection Sort: 0.181618 seconds
+
+Unsorted random 10000 elements :
+
+- Bubble Sort - Duration: 0.562018 seconds 
+- Insertion Sort - Duration: 0.224414 seconds 
+- Merge Sort - Duration: 0.00202379 seconds
+- Quick Sort- Duration: 0.00253513 seconds 
+- Quick Sort with Median Duration: 0.0289556 seconds
+- Quick Sort with Median Of Three Duration: 0.00233937 seconds
+- Selection Sort: 0.181618 seconds
 
 
 <img width="707" height="423" alt="Ekran Resmi 2025-11-10 22 37 24" src="https://github.com/user-attachments/assets/873b917e-65d0-478d-8258-2ddaf7a68ba1" />
